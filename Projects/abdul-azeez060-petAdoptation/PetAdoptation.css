@@ -1,0 +1,27 @@
+h2{
+    color: orange;
+}
+h1 span{
+    color: burlywood;
+}
+#pets{
+    display: flex;
+    justify-content: space-evenly;
+}
+img{
+    width: 100%;
+    /* height: 250px; */
+    border-radius: 10px;
+}
+.card{
+    border: 1px solid black;
+    width: 350px;
+    padding: 10px;
+    border-radius: 10px;
+    margin: 10px;
+}
+@media (max-width:375px){
+    #pets{
+        flex-wrap: wrap;
+    }
+}
