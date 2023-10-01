@@ -17,8 +17,8 @@ git checkout -b 'feature-name'
 ```
 4. Go to src -> Contributer -> user.js folder and your details:
 ```
-'name':'your-name',
-        'github_username':'your-github-username',
+        'name':'your-name',
+        'github_username': 'your-github-username',
         'about':'about-yourself',
         'linkdenProfile':'your-linkden id ',
 ```
