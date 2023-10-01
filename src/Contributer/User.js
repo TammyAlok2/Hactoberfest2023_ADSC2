@@ -12,7 +12,12 @@ const user =[
         'about':'Hello I am Sagar Singh , Frontend web developer , open source contributer.',
         'linkedinProfile':'https://www.linkedin.com/in/sagar-singh-97a600221/',
     },
-    
+    {
+        'name':'Adrian B',
+        'github_username': 'gruelingpine185',
+        'about':'I am a student who enjoys programming every opportunity I can.',
+        'linkdenProfile':'',
+    }
     
 ]
 export default user;
