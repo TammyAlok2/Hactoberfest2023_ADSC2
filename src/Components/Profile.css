@@ -1,0 +1,71 @@
+.container{
+    display: inline-flex;
+justify-content: space-around;
+    gap: 2rem;
+    flex:row;
+    
+
+}
+.box{
+    
+    border: 4px solid greenyellow;
+    border-radius: 18px 50px 30px;
+    overflow: hidden;
+    align-items: center;
+    text-align: center;
+    justify-content: space-between;
+}
+img{
+    height: 15rem;
+    width:100%;
+}
+.id{
+    font-size: 2rem;
+    color: blue;
+    text-shadow: 2px solid pink;
+}
+#profileHeading{
+    text-align: center;
+    text-shadow: 3px red ;
+    font-size: 3rem;
+}
+.price{
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bolder;
+}
+
+.add{
+    text-align: center;
+    align-items: center;
+   
+}
+.description{
+    font-size: 1.3rem;
+    font-weight: 100;
+    width: 22rem;
+}
+.remove{
+    font-size: x-large;
+    border: 2px solid green;
+    border-radius: 10px 10px 20px;
+    color: burlywood;
+    background-color: brown;
+    cursor: pointer;
+}
+.remove:hover{
+    background-color: whitesmoke;
+    color: black;
+}
+.add{
+    font-size: x-large;
+    border: 2px solid yellow;
+    border-radius: 10px 10px 20px;
+    color: burlywood;
+    background-color: green;
+    cursor: pointer;
+}
+.add:hover{
+    background-color: whitesmoke;
+    color: black;
+}
