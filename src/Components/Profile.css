@@ -1,4 +1,6 @@
 .container{
+    margin-right: 10px;
+    margin-top: 20px;
     display: inline-flex;
 justify-content: space-around;
     gap: 2rem;
