@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap");
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    background: rgba(182, 131, 84, 0.671);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container{
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 3% auto;
+	margin-top: 30px;
+    width: 550px;
+    height: 600px;
+}
+
+
+.form{
+    padding: 40px;
+}
+
+.form-control{
+    margin-bottom: 30px;
+    position: relative;
+}
+
+.form-control label{
+    display: inline-block;
+    margin-bottom: 5px;
+}
+
+.form-control input{
+    width: 100%;
+    border: 2px solid #f0f0f0;
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 5px;
+    display: block;
+}
+
+
+
+.form-control i {
+    position: absolute;
+    right: 12px;
+    top: 40px;
+    visibility: hidden;
+}
+
+.form-control.error small{
+    visibility: visible;
+}
+
+.form-control small{
+    color: #df3434;
+    position: absolute;
+    left: 0;
+    visibility: hidden;
+}
+
+.form-control.success i.fa-check-circle{
+    color: #39df7e;
+    visibility: visible;
+}
+
+.form-control.error i.fa-exclamation-circle{
+    color: #df3434;
+    visibility: visible;
+}
+.signup__submit {
+	background: #fff;
+	font-size: 14px;
+	margin-top: 20px;
+	padding: 16px 20px;
+	border-radius: 30px;
+	border: 1px solid #D4D3E8;
+	text-transform: uppercase;
+	font-weight: 700;
+	display: flex;
+    justify-content: center;
+	align-items: center;
+	width: 100%;
+	color: chocolate;
+	cursor: pointer;
+	transition: .2s;
+}
+.signup__submit:hover{
+	background: rgb(81, 33, 100);
+	color: #fff;
+}
+.social-media{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+a{
+    display: flex;
+    height: 20px;
+    width: 30px;
+    margin: 0 12px;
+    align-items: center;
+    justify-content: center;
+}
+a i{
+    font-size: 20px;
+    color: rgb(46, 5, 158);
+}
+a:hover i{
+    color: black;
+}
