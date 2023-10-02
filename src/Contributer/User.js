@@ -12,6 +12,12 @@ const user =[
         'about':'Hello I am Sagar Singh , Frontend web developer , open source contributer.',
         'linkedinProfile':'https://www.linkedin.com/in/sagar-singh-97a600221/',
     },
+    {
+        'name':'Sahil',
+        'github_username': 'Sahil-K123',
+        'about':'Hello I am Sahil Karwani, Frontend Developer , open source contributor',
+        'linkdenProfile':'https://www.linkedin.com/in/sahil-karwani-b385842349',
+    }
     
     
 ]
