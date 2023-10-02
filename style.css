@@ -1,118 +1,137 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap");
 
-*{
-    margin: 0;
-    padding: 0;
-    font-family: 'Nunito', sans-serif;
-}
-
-body{
-    background: rgba(182, 131, 84, 0.671);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Zen Dots", cursive;
 }
 
-.container{
-    background-color: #fff;
-    border-radius: 10px;
-    padding: 3% auto;
-	margin-top: 30px;
-    width: 550px;
-    height: 600px;
+html {
+  --bg: #d1e8a8;
+  --sec_bg: #fff;
+  --color: #000;
+  --hover_color: #e7e7e7;
 }
 
-
-.form{
-    padding: 40px;
+body[data-theme="dark"] {
+  --bg: #0e0e0e;
+  --sec_bg: #222222;
+  --color: #fff;
+  --hover_color: #424242;
 }
 
-.form-control{
-    margin-bottom: 30px;
-    position: relative;
+body {
+  background: var(--bg);
 }
 
-.form-control label{
-    display: inline-block;
-    margin-bottom: 5px;
+.main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.form-control input{
-    width: 100%;
-    border: 2px solid #f0f0f0;
-    font-size: 14px;
-    border-radius: 5px;
-    padding: 5px;
-    display: block;
+.calculator {
+  width: 350px;
 }
 
-
-
-.form-control i {
-    position: absolute;
-    right: 12px;
-    top: 40px;
-    visibility: hidden;
+.header {
+  width: 100%;
+  height: 60px;
+  background: #1b1a17;
+  border-radius: 10px 10px 0 0;
+  display: flex;
+  align-items: center;
 }
 
-.form-control.error small{
-    visibility: visible;
+.switchBox {
+  margin-left: 20px;
+  width: 60px;
+  height: 25px;
+  background: #d8d8d8;
+  border-radius: 20px;
+  position: relative;
 }
 
-.form-control small{
-    color: #df3434;
-    position: absolute;
-    left: 0;
-    visibility: hidden;
+.switchBox input {
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+  position: absolute;
+  z-index: 10;
+  -webkit-appearance: none;
 }
 
-.form-control.success i.fa-check-circle{
-    color: #39df7e;
-    visibility: visible;
+.switchBox .box {
+  position: absolute;
+  top: 10%;
+  left: 4px;
+  width: 20px;
+  height: 80%;
+  background: #6d6d6d;
+  border-radius: 20px;
+  transition: all 0.4s;
 }
 
-.form-control.error i.fa-exclamation-circle{
-    color: #df3434;
-    visibility: visible;
+.switchBox input:checked ~ .box {
+  left: 60%;
+  background: #ff8303;
 }
-.signup__submit {
-	background: #fff;
-	font-size: 14px;
-	margin-top: 20px;
-	padding: 16px 20px;
-	border-radius: 30px;
-	border: 1px solid #D4D3E8;
-	text-transform: uppercase;
-	font-weight: 700;
-	display: flex;
-    justify-content: center;
-	align-items: center;
-	width: 100%;
-	color: chocolate;
-	cursor: pointer;
-	transition: .2s;
+
+.input {
+  width: 100%;
+  height: 60px;
+  background: #fff;
 }
-.signup__submit:hover{
-	background: rgb(81, 33, 100);
-	color: #fff;
+
+input {
+  cursor: pointer;
 }
-.social-media{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
+.input #display {
+  width: 74%;
+  height: 60px;
+  border: none;
+  outline: none;
+  font-size: 1.5rem;
+  padding-left: 10px;
 }
-a{
-    display: flex;
-    height: 20px;
-    width: 30px;
-    margin: 0 12px;
-    align-items: center;
-    justify-content: center;
+
+.cancle_btn {
+  width: 24%;
+  height: 60px;
+  border: none;
+  background: #ff8303;
+  font-size: 1.5rem;
+  color: white;
 }
-a i{
-    font-size: 20px;
-    color: rgb(46, 5, 158);
+
+.row {
+  width: 100%;
+  margin: 10px 0;
 }
-a:hover i{
-    color: black;
+
+.row input {
+  width: 23.6%;
+  height: 60px;
+  background: var(--sec_bg);
+  color: var(--color);
+  border: 1px solid rgba(0, 0, 0, 0.137);
+  font-size: 1.5rem;
+}
+
+.active {
+  animation: animation 0.4s;
+}
+
+@keyframes animation {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+    background: var(--hover_color);
+  }
 }
