@@ -1,21 +1,23 @@
 import React from 'react';
 import User from '../Contributer/User.js';
 import './Profile.css';
+import Header from './Header.jsx';
 
 const Profile = () => {
   return (
     <div>
+      <Header/>
       <div id='profileHeading'>Profiles of Contributors</div>
       {User.map((item) => (
-        <div className="container" key={item.github_username}>
-          <div className="box">
+        <div className="" key={item.github_username}>
+          <div className="">
             <img
               src={`https://avatars.githubusercontent.com/${item.github_username}`}
               alt="alok"
               height={200}
             />
-            <h3 className="id"> {item.name}</h3>
-            <p className="description"> {item.about} </p>
+            <h3 className=""> {item.name}</h3>
+            <p className=""> {item.about} </p>
             <button>
               <a href={item.linkedinProfile}>LinkedIn</a>
             </button>
