@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  <style>
+  body {
+
+  width: 100vw;
+
+  height: 100%;
+
+  margin: 0;
+
+  padding: 0;
+
+  user-select: none;
+
+  -webkit-user-select: none;
+
+  -moz-user-select: none;
+
+  -ms-user-select: none;
+
+}
+
+
+
+body > section {
+
+  display: none;
+
+}
+
+
+
+body > .active {
+
+  display: block;
+  position: fixed;
+  top: 0;
+  left: 0;
+
+}
+
+
+
+section {
+
+  background: #171b1f;
+
+  height: 100%;
+
+  width: 100vw;
+
+  min-height: 100vh;
+
+  max-width: 100vw;
+  overflow-y: scroll;
+
+}
+
+
+
+button {
+
+  cursor: pointer;
+
+}
+
+
+
+#home header,
+
+#howtoplay header,
+
+#game header {
+
+  font-family: "Inter";
+
+  margin: 0;
+
+  color: white;
+
+  font-size: 2rem;
+
+  padding: 1rem 0 1rem 0;
+
+  text-align: center;
+
+}
+
+
+
+#home header *,
+
+#howtoplay header *,
+
+#game header * {
+
+  margin: auto;
+
+}
+
+
+
+#home #buttons {
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  height: calc(100vh - 5rem);
+
+  gap: 1rem;
+
+  width: 100vw;
+
+}
+
+
+
+#home #buttons button {
+
+  width: clamp(15ch, 90vw, 25ch);
+
+  padding: 0.8rem;
+
+  font-family: Inter;
+
+  font-size: 2rem;
+
+  border-radius: 15px;
+
+  background: transparent;
+
+  border: 2px solid white;
+
+  color: white;
+
+}
+
+
+
+#howtoplay #howto-text {
+
+  color: whitesmoke;
+
+  font-family: Inter, sans-serif;
+
+  padding: 1rem;
+
+  margin-top: 0;
+
+  padding-top: 0;
+
+}
+
+
+
+#howtoplay #howto-text a {
+
+  color: lightblue;
+
+}
+
+
+
+#game header {
+
+  display: grid;
+
+  grid-template-columns: 5rem auto 5rem;
+
+}
+
+
+
+#game header,
+
+#howtoplay header {
+
+  padding: 0;
+
+  margin: 0;
+
+}
+
+
+
+#pause-btn {
+
+  position: relative;
+
+  height: 100%;
+
+  width: 100%;
+
+  cursor: pointer;
+
+  display: grid;
+
+  place-items: center;
+
+  fill: whitesmoke;
+
+}
+
+
+
+#howtoplay header {
+
+  display: grid;
+
+  grid-template-columns: 5rem auto;
+
+}
+
+
+
+.back {
+
+  width: 100%;
+
+  height: 100%;
+
+  cursor: pointer;
+
+}
+
+
+
+#pause-btn svg,
+
+.back svg {
+
+  transform: scale(0.45);
+
+}
+
+
+
+.paused #play {
+
+  display: none;
+
+}
+
+
+
+.paused #pause {
+
+  display: block;
+
+}
+
+
+
+#play {
+
+  display: block;
+
+}
+
+
+
+#pause {
+
+  display: none;
+
+}
+
+
+
+#canvas-container {
+
+  display: grid;
+
+  place-items: center;
+
+}
+
+
+
+@media only screen and (max-width: 425px) {
+
+  #home #buttons button {
+
+    transform: scale(0.95);
+
+    font-size: 1.5rem;
+
+  }
+
+  #game header > p,
+
+  #howtoplay header > p {
+
+    font-size: 1.5rem;
+
+  }
+
+  #game header > div,
+
+  #howtoplay header > div {
+
+    transform: scale(0.7);
+
+  }
+
+}
+
+
+</style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Snake Game</title>
+  </head>
+  <body>
+    <section id="home" class="active">
+      <header>
+        <p id="logo">SNAKE GAME</p>
+      </header>
+      <div id="buttons">
+        <button id="play">Play</button>
+        <button id="howto">How to play</button>
+        <button id="high" disabled>
+          High Score: <span id="highScore">0</span>
+        </button>
+      </div>
+    </section>
+    <section id="howtoplay" class="">
+      <header>
+        <div class="back">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <path
+              fill="currentColor"
+              d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"
+            ></path>
+          </svg>
+        </div>
+        <p id="logo">SNAKE GAME</p>
+      </header>
+      <div id="howto-text">
+        <h1>What is this game?</h1>
+        <p>
+          Snake game is a very popular game in which a snake like object
+          ressembles the movement of a snake which is controlled by the user
+          with an aim to eat food. Commonly the food is an apple. As the snake
+          eats the apple it grows in size. If you want to know more about the
+          snake game you can refer
+          <a href="https://en.wikipedia.org/wiki/Snake_(video_game_genre)"
+            >this wiki.</a
+          >
+        </p>
+        <h1>How to play?</h1>
+        <p>
+          To control the snake in this game you can use the arrow keys of your
+          keyboard or ASWD keys (which ressembles the direction as of arrow
+          keys). If you are on a touch screen device then voila you can swipe on
+          the screen to change the direction of the snake. The swipe detector
+          code has been take from the
+          <a href="https://code.sololearn.com/WuyhENGspTul">library</a> by
+          <a href="https://www.sololearn.com/profile/12336223">Good Bits</a>.
+        </p>
+        <p>
+          You can use the space bar to pause/play the game and also a pause
+          button on the header is provided to pause/play the game.
+        </p>
+        <p>
+            Click on the play button ay the top to start the game after clicking on the play button. 
+        </p>
+        
+        <h2>Fun fact</h2>
+        <p>There are no routes used to create this project. It's a single page project. And also no framework was used. Everything is written in vanilla JS by me :D</p>
+      </div>
+    </section>
+    <section id="game" class="">
+      <header id="game-head">
+        <div class="back playToHome">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+          >
+            <path
+              fill="currentColor"
+              d="M223.7 239l136-136c9.4-9.4 24.6-9.4 33.9 0l22.6 22.6c9.4 9.4 9.4 24.6 0 33.9L319.9 256l96.4 96.4c9.4 9.4 9.4 24.6 0 33.9L393.7 409c-9.4 9.4-24.6 9.4-33.9 0l-136-136c-9.5-9.4-9.5-24.6-.1-34zm-192 34l136 136c9.4 9.4 24.6 9.4 33.9 0l22.6-22.6c9.4-9.4 9.4-24.6 0-33.9L127.9 256l96.4-96.4c9.4-9.4 9.4-24.6 0-33.9L201.7 103c-9.4-9.4-24.6-9.4-33.9 0l-136 136c-9.5 9.4-9.5 24.6-.1 34z"
+            ></path>
+          </svg>
+        </div>
+        <p id="score">Score: <span id="scoreNum">0</span></p>
+        <div id="pause-btn" class="paused">
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+            id="play"
+          >
+            <path
+              d="M144 479H48c-26.5 0-48-21.5-48-48V79c0-26.5 21.5-48 48-48h96c26.5 0 48 21.5 48 48v352c0 26.5-21.5 48-48 48zm304-48V79c0-26.5-21.5-48-48-48h-96c-26.5 0-48 21.5-48 48v352c0 26.5 21.5 48 48 48h96c26.5 0 48-21.5 48-48z"
+            ></path>
+          </svg>
+          <svg
+            aria-hidden="true"
+            focusable="false"
+            role="img"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 448 512"
+            id="pause"
+          >
+            <path
+              d="M424.4 214.7L72.4 6.6C43.8-10.3 0 6.1 0 47.9V464c0 37.5 40.7 60.1 72.4 41.3l352-208c31.4-18.5 31.5-64.1 0-82.6z"
+            ></path>
+          </svg>
+        </div>
+      </header>
+      <div id="canvas-container">
+        <canvas></canvas>
+      </div>
+    </section>
+    <script>
+    
+
+let canvas;
+
+let ctx;
+
+let scl = 20;
+
+let raf;
+
+let mySnake;
+
+let running = false;
+
+let apple;
+
+let score;
+
+let high;
+
+let highScore = 0;
+
+let pauseBtn;
+
+let gameContinued = false;
+
+let prevTime;
+
+let threshold = 200;
+
+
+
+// All indipendent fucntions lie here
+
+function dist(x1, x2, y1, y2) {
+
+  return Math.hypot(x1 - x2, y1 - y2);
+
+}
+
+
+
+function drawFood(food) {
+
+  ctx.fillStyle = "#ff4e0b";
+
+  ctx.fillRect(food.x, food.y, scl, scl);
+
+}
+
+
+
+function randPoint(size) {
+
+  return Math.round(Math.random() * (size / scl - 1)) * scl;
+
+}
+
+
+
+function clearCanvas() {
+
+  ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+}
+
+
+
+/*
+
+ * :CREDITS:
+
+ *
+
+ * SWIPE DETECTOR V1.1
+
+ * Made By Good_Bits
+
+ * :)
+
+ *
+
+ * Thanks to this awesome guy :D
+
+ */
+
+
+
+let SwipeDetector = (function () {
+
+  let touchStart = null;
+
+  let lastTouch = null;
+
+  let timeout = 500;
+
+  let threshold = 50;
+
+  let eventHandlers = [];
+
+  let lastTime = NaN;
+
+  let disabled = false;
+
+
+
+  class vec2D {
+
+    constructor(x, y) {
+
+      this.x = x;
+
+      this.y = y;
+
+    }
+
+
+
+    mag() {
+
+      return Math.sqrt(this.x ** 2 + this.y ** 2);
+
+    }
+
+  }
+
+
+
+  function vec2DSubtract(a, b) {
+
+    return new vec2D(a.x - b.x, a.y - b.y);
+
+  }
+
+
+
+  function handleTouchStart(event) {
+
+    touchStart = new vec2D(event.touches[0].clientX, event.touches[0].clientY);
+
+    lastTime = Date.now();
+
+  }
+
+
+
+  function handleTouchMove(event) {
+
+    lastTouch = new vec2D(event.touches[0].clientX, event.touches[0].clientY);
+
+  }
+
+
+
+  function handleTouchEnd(event) {
+
+    if (disabled === true) return;
+
+    lastTouch = lastTouch || touchStart;
+
+    let swipeVector = vec2DSubtract(touchStart, lastTouch);
+
+    let eventName = "";
+
+    let timeDiff = Date.now() - lastTime;
+
+    if (swipeVector.mag() < threshold || timeDiff > timeout) return;
+
+    if (Math.abs(swipeVector.x) > Math.abs(swipeVector.y)) {
+
+      eventName = swipeVector.x < 0 ? "swipeRight" : "swipeLeft";
+
+    } else {
+
+      eventName = swipeVector.y < 0 ? "swipeDown" : "swipeUp";
+
+    }
+
+
+
+    if (typeof eventHandlers[eventName] === "function") {
+
+      eventHandlers[eventName](touchStart, lastTouch);
+
+    }
+
+  }
+
+  window.addEventListener("touchstart", handleTouchStart);
+
+  window.addEventListener("touchmove", handleTouchMove);
+
+  window.addEventListener("touchend", handleTouchEnd);
+
+  return {
+
+    addEventListener: function (event, handler) {
+
+      eventHandlers[event] = handler;
+
+    },
+
+    setSwipeThreshold: function (value) {
+
+      threshold = value > 0 ? value : 50;
+
+    },
+
+    setSwipeTimeout: function (value) {
+
+      timeout = value > 0 ? value : 500;
+
+    },
+
+    disable: function () {
+
+      disabled = true;
+
+    },
+
+    enable: function () {
+
+      disabled = false;
+
+    },
+
+  };
+
+})();
+
+
+
+// The main snake class
+
+class Snake {
+
+  constructor() {
+
+    this.x = Math.round(Math.random() * (canvas.width / scl)) * scl;
+
+    this.y = Math.round(Math.random() * (canvas.height / scl)) * scl;
+
+
+
+    this.velocityX = scl;
+
+    this.velocityY = 0;
+
+
+
+    this.fullSnake = [];
+
+    this.tail = 0;
+
+  }
+
+
+
+  draw() {
+
+    ctx.fillStyle = "white";
+
+    ctx.fillRect(this.x + 1, this.y + 1, scl - 2, scl - 2);
+
+  }
+
+
+
+  dir(velX, velY) {
+
+    if (velX != this.velocityX && velY != this.velocityY) {
+
+      this.velocityX = velX;
+
+      this.velocityY = velY;
+
+    }
+
+  }
+
+
+
+  eatFood(food) {
+
+    if (this.x == food.x && this.y == food.y) {
+
+      for (let i = this.tail; i > 0; i--) {
+
+        this.fullSnake[i] = this.fullSnake[i - 1];
+
+      }
+
+
+
+      this.fullSnake[0] = {
+
+        x: this.x,
+
+        y: this.y,
+
+      };
+
+
+
+      this.tail++;
+
+      score.innerHTML = this.tail;
+
+      if (threshold > 80) threshold -= 0.5;
+
+
+
+      newFood();
+
+      drawFood(apple);
+
+    }
+
+  }
+
+
+
+  death() {
+
+    for (let i = 0; i < this.tail; i++) {
+
+      let spot = this.fullSnake[i];
+
+      let d = dist(this.x, spot.x, this.y, spot.y);
+
+      if (d < 1) {
+
+        if (this.tail > highScore) {
+
+          highScore = this.tail;
+
+          high.textContent = highScore;
+
+        }
+
+
+
+        this.fullSnake = [];
+
+        this.tail = 0;
+
+        alert("Game Over");
+
+        running = false;
+
+        gameContinued = false;
+
+        document.querySelector("#pause-btn").classList.toggle("paused");
+
+        score.innerHTML = 0;
+
+        clearCanvas();
+
+        return;
+
+      }
+
+    }
+
+  }
+
+
+
+  update() {
+
+    clearCanvas();
+
+
+
+    this.x += this.velocityX;
+
+    this.y += this.velocityY;
+
+
+
+    this.death();
+
+    this.eatFood(apple);
+
+    drawFood(apple);
+
+
+
+    for (let i = 0; i < this.tail; i++) {
+
+      ctx.fillStyle = "white";
+
+      ctx.fillRect(
+
+        this.fullSnake[i].x + 1,
+
+        this.fullSnake[i].y + 1,
+
+        scl - 2,
+
+        scl - 2
+
+      );
+
+      this.fullSnake[i] = this.fullSnake[i + 1];
+
+    }
+
+
+
+    if (this.x >= canvas.width) this.x = 0;
+
+    if (this.x < 0) this.x = canvas.width - scl;
+
+    if (this.y >= canvas.height) this.y = 0;
+
+    if (this.y < 0) this.y = canvas.height;
+
+
+
+    this.fullSnake[this.fullSnake.length - 1] = {
+
+      x: this.x,
+
+      y: this.y,
+
+    };
+
+
+
+    if (gameContinued == false) {
+
+      gameContinued = true;
+
+    }
+
+
+
+    this.draw();
+
+  }
+
+}
+
+
+
+// All depended functions lie here
+
+function newFood() {
+
+  let appleX = randPoint(canvas.width);
+
+  let appleY = randPoint(canvas.height);
+
+
+
+  for (let i = 0; i < mySnake.tail; i++) {
+
+    let block = mySnake.fullSnake[i];
+
+
+
+    if (block.x == appleX && block.y == apple.Y) {
+
+      appleX = randPoint(canvas.width);
+
+      appleY = randPoint(canvas.height);
+
+      i = -1;
+
+    }
+
+  }
+
+
+
+  if (mySnake.x == appleX && mySnake.y == appleY) {
+
+    appleX = randPoint(canvas.width);
+
+    appleY = randPoint(canvas.height);
+
+  }
+
+
+
+  apple = {
+
+    x: appleX,
+
+    y: appleY,
+
+  };
+
+}
+
+
+
+function keyPressed(event) {
+
+  const key = event.keyCode;
+
+  switch (key) {
+
+    case 65:
+
+    case 37:
+
+      mySnake.dir(-scl, 0);
+
+      break;
+
+    case 87:
+
+    case 38:
+
+      mySnake.dir(0, -scl);
+
+      break;
+
+    case 68:
+
+    case 39:
+
+      mySnake.dir(scl, 0);
+
+      break;
+
+    case 83:
+
+    case 40:
+
+      mySnake.dir(0, scl);
+
+      break;
+
+    case 32:
+
+      pauseGame();
+
+      break;
+
+  }
+
+}
+
+
+
+function update() {
+
+  let now = Date.now();
+
+
+
+  if (now - prevTime > threshold) {
+
+    mySnake.update();
+
+    prevTime = now;
+
+  }
+
+
+
+  if (running) window.requestAnimationFrame(update);
+
+}
+
+
+
+function resize() {
+
+  let gameHeader = document.querySelector("#game-head");
+
+  canvas.width = Math.floor(window.innerWidth / scl) * scl;
+
+  canvas.height =
+
+    Math.floor(
+
+      (window.innerHeight - gameHeader.getBoundingClientRect().height) / scl
+
+    ) * scl;
+
+}
+
+
+
+const pauseGame = () => {
+
+  if (running) {
+
+    window.cancelAnimationFrame(raf);
+
+  } else {
+
+    raf = window.requestAnimationFrame(update);
+
+    prevTime = Date.now();
+
+  }
+
+  running = !running;
+
+  pauseBtn.classList.toggle("paused");
+
+};
+
+
+
+function draw() {
+
+  score = document.querySelector("#scoreNum");
+
+  high = document.querySelector("#highScore");
+
+  score.innerHTML = "0";
+
+
+
+  let gameHeader = document.querySelector("#game-head");
+
+
+
+  canvas.width = Math.floor(window.innerWidth / scl) * scl;
+
+  canvas.height =
+
+    Math.floor(
+
+      (window.innerHeight - gameHeader.getBoundingClientRect().height) / scl
+
+    ) * scl;
+
+  canvas.style.background = "#272b2f";
+
+
+
+  mySnake = new Snake();
+
+  newFood();
+
+  drawFood(apple);
+
+  mySnake.draw();
+
+  gameContinued = true;
+
+
+  // mySnake.update();
+  
+  /*
+   * Oh you here :3 
+   * If you are reading this then comment "Got it" below :D
+   * Let's see how many of you comment this
+   */
+
+  document.body.addEventListener("keydown", keyPressed);
+
+
+
+  pauseBtn = document.querySelector("#pause-btn");
+
+  pauseBtn.addEventListener("click", pauseGame);
+
+
+
+  // Added swipe detection
+
+  SwipeDetector.addEventListener("swipeLeft", function () {
+
+    mySnake.dir(-scl, 0);
+
+  });
+
+
+
+  SwipeDetector.addEventListener("swipeRight", function () {
+
+    mySnake.dir(scl, 0);
+
+  });
+
+
+
+  SwipeDetector.addEventListener("swipeUp", function () {
+
+    mySnake.dir(0, -scl);
+
+  });
+
+
+
+  SwipeDetector.addEventListener("swipeDown", function () {
+
+    mySnake.dir(0, scl);
+
+  });
+
+}
+
+
+
+window.onload = function () {
+
+  canvas = document.querySelector("canvas");
+
+  ctx = canvas.getContext("2d");
+
+
+
+  // For the play button
+
+  const playBtn = document.querySelector("#play");
+
+  playBtn.addEventListener("click", function () {
+
+    const active = document.querySelector(".active");
+
+    active.classList.remove("active");
+
+    document.querySelector("#game").classList.add("active");
+
+    if (!gameContinued) draw();
+
+    resize();
+    pauseGame();
+
+  });
+
+
+
+  // For how to play
+
+  const howToBtn = document.querySelector("#howto");
+
+  howToBtn.addEventListener("click", function () {
+
+    const active = document.querySelector(".active");
+
+    active.classList.remove("active");
+
+    document.querySelector("#howtoplay").classList.add("active");
+
+  });
+
+
+
+  // Back button
+
+  document.querySelectorAll(".back").forEach((b) => {
+
+    b.addEventListener("click", function () {
+
+      if (b.classList.contains("playToHome") && running) {
+
+        pauseGame();
+
+      }
+
+
+
+      const active = document.querySelector(".active");
+
+      active.classList.remove("active");
+
+      document.querySelector("#home").classList.add("active");
+
+    });
+
+  });
+
+};
+
+
+
+window.onresize = resize;
+
+</script>
+  </body>
+</html>
