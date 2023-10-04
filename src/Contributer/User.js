@@ -21,8 +21,12 @@ const user =[
         'about':'Hello I am Likeur , Frontend web developer , open source contributer.',
         'linkedinProfile':'https://www.linkedin.com/in/likeur-off-47984327a/',
     },
-    
-    
+    {
+        'name':'Mohasin Haque',
+        'github_username':'Mohasin-Haque',
+        'about':'Hello I am Mohasin , Frontend web developer , open source contributer.',
+        'linkedinProfile':'https://www.linkedin.com/in/mohasin-haque-759786200/',
+    },
 ]
 
 export default user;
