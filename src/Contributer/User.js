@@ -22,6 +22,12 @@ const user =[
         'linkedinProfile':'https://www.linkedin.com/in/likeur-off-47984327a/',
     },
     {
+        'name':'Mohasin Haque',
+        'github_username':'Mohasin-Haque',
+        'about':'Hello I am Mohasin , Frontend web developer , open source contributer.',
+        'linkedinProfile':'https://www.linkedin.com/in/mohasin-haque-759786200/',
+    },
+=======
         'name':'Prathamesh',
         'github_username': 'Prathamesh1211',
         'about':'Hello, Prathamesh this side , I am a MERN stack developer and open source contributor.',
@@ -33,7 +39,7 @@ const user =[
         'about':'Hello I am gokul , java developer , open source contributer.',
         'linkedinProfile':'https://www.linkedin.com/in/gokul-s-7610ab1a9/',
     },
-    
+  
 ]
 
 export default user;
