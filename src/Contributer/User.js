@@ -26,7 +26,16 @@ const user =[
         'github_username': 'Prathamesh1211',
         'about':'Hello, Prathamesh this side , I am a MERN stack developer and open source contributor.',
         'linkdenProfile':'https://www.linkedin.com/in/prathamesh-nikumbh-a22485246/',
+        
     },
+    {
+        'name':'Bharath Gaddam',
+        'github_username': 'bharathgaddam1712',
+        'about':'Hello, bharath here!! currently im pursuing my Btech from RGIPT',
+        'linkdenProfile':'https://www.linkedin.com/in/bharath-gaddam-069128250',
+        
+    },
+      
     
 ]
 
