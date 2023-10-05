@@ -27,6 +27,12 @@ const user =[
         'about':'Hello, Prathamesh this side , I am a MERN stack developer and open source contributor.',
         'linkdenProfile':'https://www.linkedin.com/in/prathamesh-nikumbh-a22485246/',
     },
+    {
+        'name':'Gokul',
+        'github_username':'gokulz',
+        'about':'Hello I am gokul , java developer , open source contributer.',
+        'linkedinProfile':'https://www.linkedin.com/in/gokul-s-7610ab1a9/',
+    },
     
 ]
 
