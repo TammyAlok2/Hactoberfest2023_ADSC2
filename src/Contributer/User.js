@@ -21,6 +21,12 @@ const user =[
         'about':'Hello I am Likeur , Frontend web developer , open source contributer.',
         'linkedinProfile':'https://www.linkedin.com/in/likeur-off-47984327a/',
     },
+    {
+        'name':'Roshan Sahani',
+        'github_username':'felixop7',
+        'about':'Hello I am Felix , Frontend web developer , open source contributer.',
+        'linkedinProfile':'https://www.linkedin.com/in/felixop7/',
+    },
     
     
 ]
