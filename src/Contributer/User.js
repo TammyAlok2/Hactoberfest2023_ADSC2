@@ -21,7 +21,12 @@ const user =[
         'about':'Hello I am Likeur , Frontend web developer , open source contributer.',
         'linkedinProfile':'https://www.linkedin.com/in/likeur-off-47984327a/',
     },
-    
+    {
+        'name':'Prathamesh',
+        'github_username': 'Prathamesh1211',
+        'about':'Hello, Prathamesh this side , I am a MERN stack developer and open source contributor.',
+        'linkdenProfile':'https://www.linkedin.com/in/prathamesh-nikumbh-a22485246/',
+    },
     
 ]
 
