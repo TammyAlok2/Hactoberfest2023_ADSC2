@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>AngularJS Sample App</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+  <style>
+    body {
+      background-color: lightyellow;
+      text-align: center;
+    }
+    
+    h1 {
+      text-align: center;
+    }
+    
+    .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+    
+    .container input,
+    .container button {
+      margin: 10px;
+    }
+  </style>
+</head>
+<body ng-app="myApp" ng-controller="myController">
+
+  <h1>AngularJS Usage</h1>
+
+  <div class="container">
+    <h2>{{ message }}</h2>
+
+    <input type="text" ng-model="name" placeholder="Enter your name">
+    <button ng-click="updateMessage()">Update Message</button>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
