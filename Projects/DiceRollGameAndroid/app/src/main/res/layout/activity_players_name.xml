@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_black"
+    tools:context=".PlayersNameActivity">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="0dp"
+        android:layout_height="300dp"
+        android:scaleType="centerInside"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/banner1"
+        android:contentDescription="dice" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/imageView">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="DICE GAME"
+            android:fontFamily="@font/abeezee"
+
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="36sp"
+            tools:layout_editor_absoluteX="0dp"
+            tools:layout_editor_absoluteY="16dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Let the fate decide your fate"
+            android:textColor="@color/white"
+            android:fontFamily="@font/abeezee"
+
+            android:textSize="22sp"
+
+            />
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/diceimage"
+        android:layout_width="93dp"
+        android:layout_height="83dp"
+        android:layout_marginTop="48dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
+        app:srcCompat="@drawable/one" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:text="Select Player Name"
+        android:fontFamily="@font/abeezee"
+
+        android:textColor="@color/white"
+        android:textSize="22sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/diceimage"
+        app:layout_constraintTop_toTopOf="@+id/diceimage" />
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="@id/linearLayout"
+        app:layout_constraintStart_toStartOf="@id/linearLayout"
+        app:layout_constraintTop_toBottomOf="@+id/diceimage">
+
+        <EditText
+            android:id="@+id/playeroneEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:layout_margin="12dp"
+            android:textSize="22sp"
+            android:hint="Player 1"
+            android:textColorHint="@android:color/darker_gray"
+            android:textColor="@color/black"
+            android:background="@drawable/background_solid_white"
+
+            />
+        <EditText
+            android:id="@+id/playertwoEdt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="15dp"
+            android:layout_margin="12dp"
+            android:hint="Player 2"
+            android:textSize="22sp"
+            android:textColorHint="@android:color/darker_gray"
+            android:textColor="@color/black"
+            android:background="@drawable/background_solid_white"
+            />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/playbtn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:backgroundTint="@color/white"
+        android:text="Play Game "
+        android:elevation="10dp"
+        android:textAllCaps="true"
+        android:fontFamily="@font/abeezee"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/linearLayout"
+        app:layout_constraintStart_toStartOf="@+id/linearLayout" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
