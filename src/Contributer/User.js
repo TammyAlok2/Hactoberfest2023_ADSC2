@@ -21,10 +21,9 @@ const user =[
         'github_username': 'Sahil-K123',
         'about':'Hello I am Sahil Karwani, Frontend Developer , open source contributor',
         'linkdenProfile':'https://www.linkedin.com/in/sahil-karwani-b385842349',
-    }
+    },
     
-    
-=======
+    {
         'name':'Likeur off',
         'github_username':'Likeur',
         'about':'Hello I am Likeur , Frontend web developer , open source contributer.',
