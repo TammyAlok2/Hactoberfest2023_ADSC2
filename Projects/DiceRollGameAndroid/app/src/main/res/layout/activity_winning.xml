@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rootview"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/winingimage1"
+    tools:context=".WinningActivity">
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginEnd="36dp"
+        android:background="@drawable/background_solid_white"
+        android:backgroundTint="#D50000"
+        android:elevation="12dp"
+        android:fontFamily="@font/abeezee"
+        android:gravity="center"
+        android:padding="12dp"
+        android:text="Dice Game Winner"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/diceimage"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="108dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintEnd_toEndOf="@+id/winnertxt"
+        app:layout_constraintStart_toStartOf="@+id/winnertxt"
+        app:layout_constraintTop_toBottomOf="@+id/winnertxt"
+        app:srcCompat="@drawable/three" />
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:id="@+id/confetti"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="@+id/winnertxt"
+        app:layout_constraintStart_toStartOf="@+id/winnertxt"
+        app:layout_constraintTop_toTopOf="@+id/winnertxt"
+        app:lottie_autoPlay="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/confetti" />
+
+    <TextView
+        android:id="@+id/winnertxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="156dp"
+        android:fontFamily="@font/arbutus_slab"
+        tools:text="The Winner is \n Rohit "
+        android:textColor="#FFFFFF"
+
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:maxWidth="180dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:visibility="visible"
+        android:id="@+id/sharetxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="36dp"
+        android:layout_marginBottom="28dp"
+        android:background="@drawable/background_solid_round"
+        android:backgroundTint="#D50000"
+        android:rotation="-30"
+        android:elevation="12dp"
+        android:fontFamily="@font/abeezee"
+        android:gravity="center"
+        android:padding="14dp"
+        android:text=""
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:drawableStartCompat="@drawable/icon_send_24" />
+</androidx.constraintlayout.widget.ConstraintLayout>

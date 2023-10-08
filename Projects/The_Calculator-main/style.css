@@ -1,0 +1,34 @@
+html,body{
+ font-family: 'Roboto', sans-serif;;
+ background-image:linear-gradient(to top, rgb(124, 124, 124) 0%,rgb(0, 0, 0) 100%);
+ height:100%;
+ width:100%;
+}
+h1{
+    color:silver;
+}
+.button{
+    padding: 20px;
+    margin:0 3px;
+    border:2px solid gold;
+    border-radius: 9px;
+    cursor: pointer;
+    height: 55px;
+}
+.row{
+    margin:8px 0;
+}
+.row input{
+    margin: 0;
+    padding:10px 0px;
+    font-size:20px;
+    border:2px solid gold;
+    border-radius: 15px;
+}
+.row1{
+    margin: 7px 0px;
+}
+.row1 button{
+    width:52px;
+    height:55px;
+}
