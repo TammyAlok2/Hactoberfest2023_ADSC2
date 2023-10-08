@@ -16,6 +16,15 @@ const user =[
         'linkedinProfile':'https://www.linkedin.com/in/sagar-singh-97a600221/',
     },
     {
+
+        'name':'Sahil',
+        'github_username': 'Sahil-K123',
+        'about':'Hello I am Sahil Karwani, Frontend Developer , open source contributor',
+        'linkdenProfile':'https://www.linkedin.com/in/sahil-karwani-b385842349',
+    }
+    
+    
+=======
         'name':'Likeur off',
         'github_username':'Likeur',
         'about':'Hello I am Likeur , Frontend web developer , open source contributer.',
@@ -45,7 +54,7 @@ const user =[
         'about':'Hello I am Harsh,MERN stack developer and Blockchain enthusiast.',
         'linkedinProfile':'https://www.linkedin.com/in/harsh-kasana-8b6a79258/',
     },
-  
+
 ]
 
 export default user;
