@@ -8,8 +8,8 @@
       "args": [],
       "stopAtEntry": false,
       "externalConsole": true,
-      "cwd": "c:/Users/ASUS/OneDrive/Desktop/Hactoberfest2023_ADSC2",
-      "program": "c:/Users/ASUS/OneDrive/Desktop/Hactoberfest2023_ADSC2/build/Debug/outDebug",
+      "cwd": "d:/ai practice/Hactoberfest2023_ADSC2",
+      "program": "d:/ai practice/Hactoberfest2023_ADSC2/build/Debug/outDebug",
       "MIMode": "gdb",
       "miDebuggerPath": "gdb",
       "setupCommands": [
