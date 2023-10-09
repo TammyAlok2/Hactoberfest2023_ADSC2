@@ -1,4 +1,4 @@
-// this is contributers data
+// this is contributors data
 
 const user = [
   {
@@ -91,7 +91,9 @@ const user =[
         'about':'Hello I am Mohasin , Frontend web developer , open source contributer.',
         'linkedinProfile':'https://www.linkedin.com/in/mohasin-haque-759786200/',
     },
+
     {
+
         'name':'Prathamesh',
         'github_username': 'Prathamesh1211',
         'about':'Hello, Prathamesh this side , I am a MERN stack developer and open source contributor.',
@@ -104,11 +106,20 @@ const user =[
         'linkedinProfile':'https://www.linkedin.com/in/gokul-s-7610ab1a9/',
     },
     {
+
+        'name':'Munsif Ali Misri',
+        'github_username': 'munsif12',
+        'about':'As a full-stack developer, I love building highly scalable products.',
+        'linkdenProfile':'https://www.linkedin.com/in/munsif-ali-misri-8191261a8/',
+    }
+  
+  ,{
         'name':'Harsh kasana',
         'github_username':'harshkas4na',
         'about':'Hello I am Harsh,MERN stack developer and Blockchain enthusiast.',
         'linkedinProfile':'https://www.linkedin.com/in/harsh-kasana-8b6a79258/',
     },
+
 
 ]
 
