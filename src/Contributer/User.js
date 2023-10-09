@@ -55,6 +55,12 @@ const user = [
     about: 'Bacot gua cuman butuh buat hacktoberfest',
     linkedinProfile: '',
   },
+   {
+    name: 'Syed Hassan',
+    github_username: 'syed007hassan',
+    about: 'Aspiring backend dev',
+    linkedinProfile: 'https://www.linkedin.com/in/syedmuhammedhassanali8/',
+  },
 ];
 
 
