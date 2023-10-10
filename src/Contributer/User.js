@@ -2,14 +2,6 @@
 
 const user = [
   {
-    name: "Safiya Siddiqui",
-    github_username: "QaziSafiya",
-    about:
-      "Hello I am Safiya Siddiqui , Frontend web developer, Open sourse contributer",
-    linkedinProfile: "https://www.linkedin.com/in/safiya-siddiqui-566009214/",
-  },
-
-  {
     name: "Alok Tamrakar",
     github_username: "tammyalok2",
     about:
@@ -68,6 +60,14 @@ const user = [
     github_username: "mnaufal-helmi",
     about: "Bacot gua cuman butuh buat hacktoberfest",
     linkedinProfile: "",
+  },
+
+  {
+    name: "Safiya Siddiqui",
+    github_username: "QaziSafiya",
+    about:
+      "Hello I am Safiya Siddiqui , Frontend web developer, Open sourse contributer",
+    linkedinProfile: "https://www.linkedin.com/in/safiya-siddiqui-566009214/",
   },
 ];
 
