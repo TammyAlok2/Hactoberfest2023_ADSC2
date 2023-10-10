@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Filter Gallery</title>
+    <link rel="stylesheet" href="Gallery.css" />
+  </head>
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  body {
+    background-color: black;
+  }
+
+  .filter-btns {
+    width: 100%;
+    height: 200px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .btns {
+    width: 150px;
+    height: 60px;
+    padding: 20px;
+    margin: 20px;
+
+    border-image: linear-gradient(45deg, rgb(65, 81, 205), rgb(248, 85, 199))
+      1;
+    background: #000;
+    color: white;
+    font-size: 1rem;
+  }
+  .main-box {
+    width: 100%;
+    height: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+  }
+  .cards {
+    width: 90%;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 30%);
+    margin-left: 200px;
+  }
+  .boxes {
+    width: 200px;
+    height: 250px;
+    border-radius: 12px;
+    margin: 40px;
+    box-shadow: rgb(18, 18, 18) 0px 3px 8px;
+  }
+  img {
+    width: 250px;
+    height: 250px;
+    border-radius: 12px;
+    box-shadow: rgba(5, 5, 5, 0.92) 0px 3px 8px;
+  }
+
+  @media (min-width: 700px) and (max-width: 1100px) {
+    .filter-btns {
+      width: 100%;
+      height: 200px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .cards {
+      width: 90%;
+      height: 800px;
+      display: grid;
+      grid-template-columns: repeat(2, 45%);
+      padding: 20px;
+      margin-left: -10px;
+    }
+
+    .boxes {
+      width: 200px;
+      height: 250px;
+      border-radius: 12px;
+      margin: 60px;
+      box-shadow: rgb(18, 18, 18) 0px 3px 8px;
+    }
+    img {
+      width: 200px;
+      height: 250px;
+      border-radius: 12px;
+      box-shadow: rgba(5, 5, 5, 0.92) 0px 3px 8px;
+    }
+  }
+
+  @media (min-width: 200px) and (max-width: 700px) {
+    .filter-btns {
+      width: 100%;
+      height: 200px;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .cards {
+      width: 90%;
+      height: 800px;
+      display: grid;
+      grid-template-columns: repeat(2, 45%);
+      gap: 20px;
+      padding: 20px;
+      margin-left: -100px;
+    }
+
+    .boxes {
+      width: 120px;
+      height: 150px;
+      border-radius: 12px;
+      margin: 60px;
+      box-shadow: rgb(18, 18, 18) 0px 3px 8px;
+    }
+    img {
+      width: 120px;
+      height: 150px;
+      border-radius: 12px;
+      box-shadow: rgba(5, 5, 5, 0.92) 0px 3px 8px;
+    }
+  }
+</style>
+
+  <body>
+    <div class="filter-btns">
+      <button class="btns active" data-filter="all">All</button>
+      <button class="btns" data-filter="skirt">Skirt</button>
+      <button class="btns" data-filter="dress">Dresses</button>
+    </div>
+
+    <div class="main-box">
+      <div class="cards">
+        <div class="boxes dress">
+          <img
+            src="https://i.pinimg.com/originals/06/58/b0/0658b0c23ce18e5446f3163a363d9be3.jpg"
+            alt=""
+          />
+        </div>
+        <div class="boxes dress">
+          <img
+            src="https://ae01.alicdn.com/kf/HTB1RUzyX2fsK1RjSszgq6yXzpXaH/Baby-floral-dress-newborn-girl-dress-baptism-first-birthday-party-kids-costume-beaded-tulle-1-year.jpg_640x640.jpg"
+            alt=""
+          />
+        </div>
+        <div class="boxes dress">
+          <img
+            src="https://tse1.mm.bing.net/th?id=OIP.LmznxHBIit0RkM5NLJDnwwHaHa&pid=Api&P=0&h=180"
+            alt=""
+          />
+        </div>
+        <div class="boxes dress">
+          <img
+            src="https://ae01.alicdn.com/kf/HTB1S0D6jDmWBKNjSZFBq6xxUFXan/rainbow-colors-tulle-dress-princess-dress-elegant-baby-girls-birthday-party-dress-flower-girls-colorful-tulle.jpg"
+            alt=""
+          />
+        </div>
+        <div class="boxes dress">
+          <img
+            src="https://images-na.ssl-images-amazon.com/images/I/612NflvsvJL._AC_UL1200_.jpg"
+            alt=""
+          />
+        </div>
+        <div class="boxes dress">
+          <img
+            src="https://ae01.alicdn.com/kf/HTB1SooOQXXXXXXRXXXXq6xXFXXXV/5-Color-2018-New-Infant-Baby-Formal-Party-Dress-Sleeveless-Flower-Tulle-Princess-Evening-Wedding-Flower.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="boxes skirt">
+          <img
+            src="https://ae01.alicdn.com/kf/HTB1em4dppuWBuNjSszbq6AS7FXat/Baby-Girls-Tutu-Skirts-With-Beads-Summer-Kids-Ruffle-Skirts-For-Baby-Girls-Summer-Clothes-Toddler.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="boxes skirt">
+          <img
+            src="https://4.bp.blogspot.com/-rc0URSxHtb8/T2pYoiFv9xI/AAAAAAAAAVM/eU0OD1YU_Bc/s1600/DSC_0302.JPG"
+            alt=""
+          />
+        </div>
+        <div class="boxes skirt">
+          <img
+            src="https://tse1.mm.bing.net/th?id=OIP.GRjJQRuxIYEoLKlYa-OFFAHaHF&pid=Api&P=0&h=180"
+            alt=""
+          />
+        </div>
+        <div class="boxes skirt">
+          <img
+            src="https://tse4.mm.bing.net/th?id=OIP.bxu0L76l8wJ4WezMS3TN2AHaE8&pid=Api&P=0&h=180"
+            alt=""
+          />
+        </div>
+
+        <div class="boxes skirt">
+          <img
+            src="https://i.etsystatic.com/15123418/r/il/fc1560/1792678006/il_fullxfull.1792678006_so7j.jpg"
+            alt=""
+          />
+        </div>
+
+        <div class="boxes skirt">
+          <img
+            src="https://i.ytimg.com/vi/414aqWAUCUM/maxresdefault.jpg"
+            alt=""
+          />
+        </div>
+      </div>
+    </div>
+  </body>
+  <script>
+function loading() {
+  const button = document.querySelectorAll(".btns");
+  const card = document.querySelectorAll(".boxes");
+
+  button.forEach((ele) => {
+    ele.addEventListener("click", (e) => {
+      e.preventDefault();
+      const filter = e.target.dataset.filter;
+      card.forEach((e) => {
+        if (filter === "all") {
+          e.style.display = "block";
+        } else {
+          if (e.classList.contains(filter)) {
+            e.style.display = "block";
+          } else {
+            e.style.display = "none";
+          }
+        }
+      });
+    });
+  });
+}
+
+loading();
+</script>
+</html>
