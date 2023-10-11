@@ -75,6 +75,12 @@ const user = [
     about: 'Aspiring backend dev',
     linkedinProfile: 'https://www.linkedin.com/in/syedmuhammedhassanali8/',
   },
+  {
+    name: 'Sreejith',
+    github_username: 'Sreejith2',
+    about: 'Hi ! Backend developer, Open sourse contributer',
+    linkedinProfile: 'https://www.linkedin.com/in/sreejith-p10',
+  },
 ];
 
 export default user;
