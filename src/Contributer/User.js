@@ -75,6 +75,12 @@ const user = [
     about: 'Aspiring backend dev',
     linkedinProfile: 'https://www.linkedin.com/in/syedmuhammedhassanali8/',
   },
+  {
+    name: 'Pratyush Agrawal',
+    github_username: 'K-MAC27',
+    about: 'Full stack developer',
+    linkedinProfile: 'https://www.linkedin.com/in/pratyush2704/',
+  },
 ];
 
 export default user;
