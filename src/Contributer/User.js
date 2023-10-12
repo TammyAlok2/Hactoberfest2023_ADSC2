@@ -69,11 +69,17 @@ const user = [
       "Hello I am Safiya Siddiqui , Frontend web developer, Open sourse contributer",
     linkedinProfile: "https://www.linkedin.com/in/safiya-siddiqui-566009214/",
   },
-   {
-    name: 'Syed Hassan',
-    github_username: 'syed007hassan',
-    about: 'Aspiring backend dev',
-    linkedinProfile: 'https://www.linkedin.com/in/syedmuhammedhassanali8/',
+  {
+    name: "Syed Hassan",
+    github_username: "syed007hassan",
+    about: "Aspiring backend dev",
+    linkedinProfile: "https://www.linkedin.com/in/syedmuhammedhassanali8/",
+  },
+  {
+    name: "Laxman",
+    github_username: "Laxman67",
+    about: "Aspiring Full Stack Web Developer (MERN Stack)  , 3rd yr of BCA ",
+    linkedinProfile: "https://www.linkedin.com/in/laxmanitstudent/",
   },
   {
     name: 'Anjali',
