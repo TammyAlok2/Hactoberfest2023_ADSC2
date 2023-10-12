@@ -93,6 +93,12 @@ const user = [
     about: 'Full stack developer',
     linkedinProfile: 'https://www.linkedin.com/in/pratyush2704/',
   },
+  {
+    name: 'Kevin Malik Fajar',
+    github_username: 'kevinmf1',
+    about: 'My name is Kevin, i would like to coded in Android Native but currently im learning about android multiplatform',
+    linkedinProfile: 'https://www.linkedin.com/in/kevinmalikfajar/',
+  },
 ];
 
 export default user;
