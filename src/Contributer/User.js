@@ -2,6 +2,12 @@
 
 const user = [
   {
+    name: 'Aakash Chaudhary',
+    github_username: 'aakash176',
+    about: 'Hey everyone, I am a software engineer working as a full stack web developer. I am into MERN stack for web development and I am also a google cloud certified Professional Cloud Architect.',
+    linkedinProfile: 'https://www.linkedin.com/in/aakash-chaudhary-519b52211/',
+  },
+  {
     name: "Alok Tamrakar",
     github_username: "tammyalok2",
     about:
@@ -93,6 +99,7 @@ const user = [
     about: 'Full stack developer',
     linkedinProfile: 'https://www.linkedin.com/in/pratyush2704/',
   },
+  
 ];
 
 export default user;

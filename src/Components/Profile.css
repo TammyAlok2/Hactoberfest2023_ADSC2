@@ -2,16 +2,20 @@
     margin-right: 10px;
     margin-top: 20px;
     display: inline-flex;
-justify-content: space-around;
+    justify-content: space-around;
     gap: 2rem;
     flex:row;
+    cursor: pointer;
+    border-radius: 30px;
     
 
 }
+.container:hover{
+    box-shadow: 4px 4px 20px black;
+}
 .box{
-    
-    border: 4px solid greenyellow;
-    border-radius: 18px 50px 30px;
+    border: 1px solid grey;
+    border-radius: 30px;
     overflow: hidden;
     align-items: center;
     text-align: center;
@@ -70,4 +74,18 @@ img{
 .add:hover{
     background-color: whitesmoke;
     color: black;
+}
+
+button{
+    padding: 10px;
+    margin: 5px;
+    background-color: black;
+    border-radius: 30px;
+}
+button:hover{
+    box-shadow: 4px 4px 20px black;
+}
+button a{
+    text-decoration: none;
+    color: gold;
 }
