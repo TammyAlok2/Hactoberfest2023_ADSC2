@@ -8,6 +8,12 @@ const user = [
     linkedinProfile: 'https://www.linkedin.com/in/aakash-chaudhary-519b52211/',
   },
   {
+    name: 'Arun Kumar',
+    github_username: 'arunks2003',
+    about: 'Hi everyone I student pursuing btech. I am fond of web technlogies and contrinuting in them.',
+    linkedinProfile: 'https://www.linkedin.com/in/arun-kumar-58b963253/',
+  },
+  {
     name: "Alok Tamrakar",
     github_username: "tammyalok2",
     about:
@@ -99,7 +105,7 @@ const user = [
     about: 'Full stack developer',
     linkedinProfile: 'https://www.linkedin.com/in/pratyush2704/',
   },
-  
+
 ];
 
 export default user;
