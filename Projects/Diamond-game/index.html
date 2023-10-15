@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diamond Clicker</title>
+  <link rel="icon" type="image/x-icon" href="/assets/diamond.png">
+  <link rel="stylesheet" href="index.css">
+</head>
+
+<body>
+
+  <!-- background music -->
+  <!-- <audio loop autoplay id="bgmusic">
+    <source src="./assets/swingbee-157396.mp3" type="audio/mp3">
+  </audio> -->
+
+  <!-- Creating heading that contain Diamond Clicker h1 tag -->
+  <Header>
+    <div class="gameName">
+      <h1>Diamond clicker</h1>
+    </div>
+  </Header>
+  <section>
+    <section>
+
+      <!-- Creating intro section that contain element that is shown at the beginning of the game-->
+      <div class="intro">
+        <center>
+
+          <!-- Div that contain How to play instructions -->
+          <div class="how-to-play">
+            <h1>How To play</h1>
+            <p>
+              1. You Have to click on the Diamond To earn <br>
+              2. You can spend those Diamond to buy Upgrades <br>
+              3. Upgrades help you to earn Diamonds faster !! <br>
+            </p>
+
+
+            <p class="play">
+              <center class="tap-to-play">Enjoy!!<br>(click anywhere to play)</center>
+
+            </p>
+          </div>
+
+        </center>
+      </div>
+
+    </section>
+
+
+    <!-- Creating outro section that contain element that is shown at the ending of the game-->
+
+    <section>
+      <div class="outro">
+        <center>
+          <!-- Div that contain scores -->
+          <div class="score">
+            <h1>
+              Congratulations <br> you have completed the game
+            </h1>
+            <p>
+              Total clicks : <span class="totalClicks-span">0</span> <br>
+              Total Diamonds Earn : <span class="totalDiamonds-span">0</span> <br>
+              Total Diamonds Spend : <span class="totalSpend-span">0</span> <br>
+            </p>
+            <center>
+              <p class="play-again">
+                Created By Vishesh <br>
+                (click anywhere to Restart)
+
+              </p>
+            </center>
+          </div>
+
+        </center>
+      </div>
+
+    </section>
+
+    <!-- This section contain all the element except Heading -->
+    <section>
+
+      <div class="main">
+
+        <!-- This div contain left/top section that contain no. of Diamonds, diamond per second and image than we click to earn -->
+        <div class="left">
+
+          <!-- This h tag contain no. of Diamonds -->
+          <h3>Diamonds <span class="diamond-count">0</span></h3>
+
+          <!-- This div tag contain diamond per second -->
+          <center style="padding-bottom: 10px;">
+            <div>
+
+              <h5>
+                <span class="cps-span">0</span> Diamond Per Second
+              </h5>
+
+            </div>
+          </center>
+
+          <!-- This div tag contain image than we click to earn -->
+          <div class="diamond-img"></div>
+
+        </div>
+
+
+        <!-- This div contain right/bottom section that contain upgrade heading, upgrades and restart button -->
+        <div class="right">
+
+          <!-- This h tag contain upgrade heading -->
+          <center>
+            <h2>Upgrades</h2>
+          </center>
+
+          <!-- This div contain upgrades -->
+          <div class="upgrade-list">
+
+            <!-- Pickaxe Upgrade -->
+            <div class="pickaxe-upgrade upgrade">
+
+              <!-- upgrade image -->
+              <div class="upgrade-left">
+                <img src="./assets/pickaxes/fist.png" alt="" class="pickaxe-icon">
+              </div>
+
+              <div class="upgrade-center">
+
+                <!-- upgrade name -->
+                <div class="upgrade-name">
+                  <h4>Pickaxe</h4>
+                </div>
+
+                <!-- upgrade description -->
+                <div class="description pickaxe-description">
+                  It will Increase clicking to <span class="click-increase">2</span> diamonds per second
+                </div>
+
+                <!-- upgrade cost -->
+                <div class="upgrade-cost">
+
+                  <div class="upgrade-cost-amount pickaxe-upgrade-cost-amount">
+                    cost : <span class="pickaxe-cost">100</span>
+                  </div>
+
+                  <img src="./assets/diamond.png" alt="">
+
+                </div>
+              </div>
+
+              <!-- upgrade level -->
+              <div class="upgrade-right">
+                <div>
+                  Level <span class="pickaxe-level">0</span>
+                </div>
+              </div>
+
+            </div>
+
+
+            <!-- Miner Upgrade -->
+            <div class="upgrade miner-upgrade">
+
+              <!-- upgrade image -->
+              <div class="upgrade-left">
+                <img src="./assets/miners/onlyMiner.png" alt="" class="miner-icon">
+              </div>
+
+              <div class="upgrade-center">
+
+                <!-- upgrade name -->
+                <div class="upgrade-name">
+                  <h4>Miner</h4>
+                </div>
+
+                <!-- upgrade description -->
+                <div class="description miner-description">
+                  It will Increase auto clicking to <span class="cps-increase">1</span> diamonds per second
+                </div>
+
+                <!-- upgrade cost -->
+                <div class="upgrade-cost">
+
+                  <div class="upgrade-cost-amount miner-upgrade-cost-amount">
+                    cost : <span class="miner-cost">1000</span>
+                  </div>
+
+                  <img src="./assets/diamond.png" alt="">
+
+                </div>
+              </div>
+
+              <!-- upgrade level -->
+              <div class="upgrade-right">
+                <div>Level <span class="miner-level">0</span></div>
+              </div>
+
+            </div>
+
+
+            <div class="mines-upgrade upgrade">
+
+              <!-- upgrade image -->
+              <div class="upgrade-left">
+                <img src="./assets/mine.png" alt="" class="mines-icon">
+              </div>
+
+              <!-- upgrade name -->
+              <div class="upgrade-center">
+                <div class="upgrade-name">
+                  <h4>Mines</h4>
+                </div>
+
+                <!-- upgrade description -->
+                <div class="description mines-description">
+                  It will increase Diamond production to <span class="mines-increase">2</span>
+                  times
+                </div>
+
+                <!-- upgrade cost -->
+                <div class="upgrade-cost">
+
+                  <div class="upgrade-cost-amount mines-upgrade-cost-amount ">
+                    cost : <span class="mines-cost">10000</span>
+                  </div>
+
+                  <img src="./assets/diamond.png" alt="">
+
+                </div>
+
+              </div>
+
+              <!-- upgrade level -->
+              <div class="upgrade-right">
+                <div>Level <span class="mines-level">0</span></div>
+              </div>
+
+            </div>
+
+          </div>
+
+          <!-- Restart button -->
+          <div style="width: 100%; display: flex; justify-content: center;">
+
+            <button class="reset">Restart Game</button>
+          </div>
+
+        </div>
+
+
+      </div>
+
+    </section>
+  </section>
+
+  <!-- Copyright section then contain github redirection -->
+  <section>
+
+    <div style="position: absolute; right: 0; bottom: 0; padding-right: 10px;">
+
+      <p class="creater">
+        Created By - <a href="https://github.com/onlyVishesh/Diamond-Clicker-Game">Vishesh </a>
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <script src="index.js"></script>
+</body>
+
+</html>

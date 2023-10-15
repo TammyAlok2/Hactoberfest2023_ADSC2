@@ -1,0 +1,587 @@
+/* basic page style */
+
+body {
+    /*Display stuff*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /*Box model stuff*/
+    height: 100vh;
+    margin: 0px;
+    padding: 0px;
+    background-color: rgb(20, 20, 20);
+    /*Typography stuff*/
+    color: #fff;
+    /*Miscellaneous*/
+    -webkit-tap-highlight-color: rgba(255, 255, 255, 0);
+    -webkit-tap-highlight-color: transparent;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    /* overflow:hidden; */
+}
+
+/* basic button style */
+
+button {
+    /*Box model stuff*/
+    padding: 0.2vw;
+    border: none;
+    background: #36383b;
+    /*Typography stuff*/
+    text-align: center;
+    text-decoration: none;
+    color: #5783ff;
+    /*Miscellaneous*/
+    cursor: pointer;
+}
+
+/* basic button hover style */
+
+button:hover {
+    font-size: larger;
+    /*Miscellaneous*/
+    cursor: pointer;
+}
+
+/* basic a tag style */
+
+a {
+    /*Typography stuff*/
+    text-decoration: none;
+    color: aqua;
+}
+
+/* intro style */
+
+.intro {
+    /*Display stuff*/
+    display: flex;
+    justify-content: center;
+    /*Positioning stuff*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    /*Box model stuff*/
+    width: 100vw;
+    height: 100vh;
+    /*Miscellaneous*/
+    backdrop-filter: blur(5px);
+}
+
+/* basic style for How to play */
+
+.how-to-play {
+    /*Positioning stuff*/
+    z-index: 101;
+    /*Box model stuff*/
+    width: 31vw;
+    height: max-content;
+    padding: 10px;
+    margin-top: 2vw;
+    border-radius: 5vw;
+    background-color: #fff;
+    /*Typography stuff*/
+    color: black;
+}
+
+/* How to play heading style */
+
+.how-to-play h1 {
+    /*Box model stuff*/
+    margin: 0;
+    /*Typography stuff*/
+    font-size: 4vw;
+    color: black;
+}
+
+/* How to play points style */
+
+.how-to-play p {
+    /*Box model stuff*/
+    margin: 10px;
+    /*Typography stuff*/
+    font-size: 2.5vw;
+    text-align: left;
+    /*Miscellaneous*/
+    line-height: 2.8vw;
+}
+
+/* how to start style */
+
+.play {
+    /*Typography stuff*/
+    text-align: center;
+}
+
+.tap-to-play {
+    font-size: 2.3vw;
+    line-height: 3vw;
+}
+
+/* end screen style */
+
+.outro {
+    /*Display stuff*/
+    display: none;
+    justify-content: center;
+    /*Positioning stuff*/
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 100;
+    /*Box model stuff*/
+    width: 100vw;
+    height: 100vh;
+    /*Miscellaneous*/
+    backdrop-filter: blur(5px);
+}
+
+/* end screen scores style */
+
+.score {
+    /*Positioning stuff*/
+    z-index: 101;
+    /*Box model stuff*/
+    margin-top: 2vw;
+
+    width: max-content;
+    height: max-content;
+    padding: 10px;
+    border-radius: 5vw;
+    background-color: #fff;
+    /*Typography stuff*/
+    color: black;
+}
+
+/* end screen scores h tag style */
+
+.score h1 {
+    /*Box model stuff*/
+    margin: 0;
+    /*Typography stuff*/
+    font-size: 3vw;
+    color: black;
+}
+
+/* end screen scores p tag style */
+
+.score p {
+    /*Box model stuff*/
+    margin: 10px;
+    padding-top: 1vw;
+    /*Typography stuff*/
+    font-size: 2vw;
+    text-align: center;
+    /*Miscellaneous*/
+    line-height: 2.3vw;
+}
+
+/* end screen restart style */
+
+.play-again {
+}
+
+/* game name, left and right style */
+
+.main {
+    /*Display stuff*/
+    display: flex;
+    justify-content: space-evenly;
+    /*Box model stuff*/
+    border: 100px;
+    border-color: aqua;
+    border-width: 10px;
+    /*Miscellaneous*/
+    /* align-content: space-evenly; */
+    gap: 10vw;
+}
+
+/* game name style */
+
+.gameName {
+    /*Box model stuff*/
+    margin: 0px;
+    padding: 0px;
+    /*Typography stuff*/
+    font-size: 1.5vw;
+}
+
+/* left section style */
+
+.left {
+    /*Display stuff*/
+    display: flex;
+    flex-direction: column;
+    /*Box model stuff*/
+    margin: 0;
+    padding: 0;
+    /*Miscellaneous*/
+    gap: 0rem;
+}
+
+/* no. of diamond  style */
+
+.left h3 {
+    /*Box model stuff*/
+    margin: 0px;
+    margin-bottom: 1vw;
+    /*Typography stuff*/
+    font-size: 2.25vw;
+    text-align: center;
+}
+
+/* diamond per second  style */
+
+h5 {
+    /*Box model stuff*/
+    margin: 0px;
+    margin-bottom: 2vw;
+    /*Typography stuff*/
+    font-size: 1.75vw;
+}
+
+/* diamond img style */
+
+.diamond-img {
+    /*Positioning stuff*/
+    position: relative;
+    /*Box model stuff*/
+    width: 27vw;
+    height: 27vw;
+    border-radius: 2vw;
+    background-image: url("./assets/diamond.png");
+    background-size: 27vw;
+    /*Manipulations stuff*/
+    transition: 0.01s ease-in-out;
+}
+
+/* diamond img hover style */
+
+.diamond-img:hover {
+    /*Manipulations stuff*/
+    opacity: 0.93;
+    /*Miscellaneous*/
+    cursor: pointer;
+}
+
+/* diamond img onclick style */
+
+.diamond-img:active {
+    transform: scale(1.05);
+}
+
+/* .diamond-img img {
+    width: 27vw;
+    border-radius: 8.2vw;
+}
+
+.diamond-img img:hover {
+    cursor: pointer;
+    opacity: 0.95;
+}
+
+.diamond-img img:active {
+    transform: scale(1.05);
+} */
+
+.diamond-img > .manualNumber,
+.autoNumber {
+    /*Positioning stuff*/
+    position: absolute;
+    z-index: 10;
+    /*Miscellaneous*/
+    /* font-size: 2vw; */
+}
+
+/* autoclicking numbers style */
+
+.autoNumber {
+    /*Positioning stuff*/
+    left: 50%;
+    top: 20vw;
+}
+
+/* upgrade list style */
+
+.right,
+.upgrade-list {
+    /*Display stuff*/
+    display: flex;
+    flex-direction: column;
+    /*Box model stuff*/
+    margin: 0;
+    padding: 0;
+    /*Miscellaneous*/
+    gap: 0.7vw;
+}
+
+/* upgrade style */
+
+.right .upgrade {
+    /*Display stuff*/
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    /*Box model stuff*/
+    padding: 4px 12px 2px 10px;
+    border: 2px solid #fff;
+    border-radius: 5px;
+    background-color: rgb(30, 30, 30);
+    /*Miscellaneous*/
+    gap: 3vw;
+    /*Manipulations stuff*/
+    transition: all 0.3;
+}
+
+/* upgrade hover style */
+
+.upgrade:hover {
+    /*Manipulations stuff*/
+    transform: scale(1.02);
+    /*Miscellaneous*/
+    cursor: pointer;
+}
+
+/* upgrade onclick style */
+
+.right .upgrade:active {
+    /*Manipulations stuff*/
+    transform: scale(1.04);
+}
+
+.upgrade-left img {
+    width: 6vw;
+}
+
+.upgrade-left .mines-icon {
+    width: 8vw;
+}
+
+/* upgrade center style */
+
+.upgrade .upgrade-center {
+    /*Display stuff*/
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /*Box model stuff*/
+    width: max-content;
+    /*Miscellaneous*/
+    gap: 1vw;
+}
+
+/* upgrade name style */
+
+.upgrade-center h4 {
+    /*Box model stuff*/
+    margin: 0px;
+    padding: 0px;
+}
+
+/* description style */
+
+.upgrade-center .description {
+    /*Typography stuff*/
+    font-size: 1vw;
+    text-align: center;
+    /*Miscellaneous*/
+    line-height: 1.5vw;
+}
+
+/* upgrade cost style */
+
+.upgrade-cost {
+    /*Display stuff*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /*Miscellaneous*/
+    gap: 0vw;
+}
+
+.upgrade-cost img {
+    height: 2vw;
+    margin-left: 0vw;
+}
+
+/* Restart button style */
+
+.reset {
+    /*Display stuff*/
+    align-items: end;
+    /*Box model stuff*/
+    width: auto;
+    margin-top: 2vw;
+    padding: 10px;
+    border-radius: 1vw;
+    /*Typography stuff*/
+    font-size: 1.5vw;
+}
+
+/* copyright section style */
+.creater {
+    /*Box model stuff*/
+    margin: 2px;
+    /*Typography stuff*/
+    font-size: 1vw;
+}
+
+/* Onclick effects for upgrades */
+
+.btn-green,
+.btn-red {
+    background: transparent;
+    transition: all 0.5s ease-in-out;
+}
+
+/* Green effect when buy upgrade */
+
+.btn-green:active:before {
+    background: rgba(0, 128, 0, 0.75);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: scale(0);
+    transition: 0.5s ease-in-out;
+    width: 100%;
+    z-index: -1;
+}
+
+.btn-green:active:before {
+    background-color: rgba(0, 128, 0, 0.75);
+    transform: scale(1);
+}
+.btn-green:active {
+    background-color: rgba(0, 128, 0, 0.75);
+    color: #f1f1f1;
+}
+
+.btn-green:focus {
+    outline: none;
+}
+
+/* Green effect when you can't buy upgrade */
+
+.btn-red:active:before {
+    background: rgba(255, 0, 0, 0.75);
+    content: "";
+    height: 100%;
+    left: 0;
+    position: absolute;
+    top: 0;
+    transform: scale(0);
+    transition: 0.5s ease-in-out;
+    width: 100%;
+    z-index: -1;
+}
+
+.btn-red:active:before {
+    background-color: rgba(255, 0, 0, 0.75);
+    transform: scale(1);
+}
+.btn-red:active {
+    background-color: rgba(255, 0, 0, 0.75);
+    color: #f1f1f1;
+}
+
+.btn-red:focus {
+    outline: none;
+}
+
+/* Responsiveness */
+
+@media (max-width: 750px) {
+    .gameName {
+        font-size: 3vw;
+    }
+    .main {
+        flex-direction: column;
+        gap: 3vw;
+    }
+    .diamond-img {
+        background-size: 39vw;
+        height: 39vw;
+        left: 23%;
+        width: 39vw;
+    }
+
+    .left h3 {
+        font-size: 5vw;
+    }
+
+    h5 {
+        font-size: 2vw;
+    }
+
+    .upgrade-left img {
+        width: 9vw;
+    }
+
+    .upgrade-left .mines-icon {
+        width: 10vw;
+    }
+
+    .upgrade-center .description {
+        font-size: 1.75vw;
+        line-height: 1.5vw;
+        text-align: center;
+    }
+
+    .upgrade-cost {
+        font-size: 4vw;
+    }
+
+    .upgrade-cost img {
+        height: 3.5vw;
+    }
+
+    .reset {
+        border-radius: 2vw;
+        font-size: 3.5vw;
+        width: auto;
+    }
+
+    .creater {
+        font-size: 2vw;
+    }
+}
+
+@media (max-width: 450px) and (min-width: 400px) {
+    .gameName {
+        font-size: 2.9vw;
+    }
+    .main {
+        gap: 2.8vw;
+    }
+    .diamond-img {
+        background-size: 38vw;
+        height: 38vw;
+        width: 38vw;
+    }
+
+    .left h3 {
+        font-size: 4.5vw;
+    }
+
+    h5 {
+        font-size: 1.9vw;
+    }
+
+    .upgrade-center .description {
+        font-size: 1.7vw;
+        line-height: 1.45vw;
+        text-align: center;
+    }
+
+    .upgrade-cost {
+        font-size: 3.5vw;
+    }
+}

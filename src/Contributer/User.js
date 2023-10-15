@@ -100,6 +100,12 @@ const user = [
     linkedinProfile: 'https://www.linkedin.com/in/anjali-0352b1248/',
   },
   {
+    name:'Ansh Verma',
+    github_username:'anshv-dev', 
+    about:'Web Developer',
+    linkdinProfile:'https://www.linkedin.com/in/ansh-verma-a4b4a7253/'
+  },
+  {
     name: 'Pratyush Agrawal',
     github_username: 'K-MAC27',
     about: 'Full stack developer',
