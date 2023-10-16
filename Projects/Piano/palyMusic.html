@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+          font-family: sans-serif;
+          text-align: center;
+        }
+        .board{
+            display:inline-flex;
+            background-color: rgb(36, 36, 36);
+            padding:30px 40px;
+            border-radius: 20px;
+            justify-content: center;
+
+        }
+        .ky{
+            border-radius: 0 0 18px 18px;
+            text-align: center;
+        }
+        .k1{
+            padding: 0;
+            height:250px;
+            width:80px;
+            background-image: linear-gradient(white 96%,grey 5%);
+            border: 1px solid black;
+            margin: 0;
+            
+        }
+        .k2{
+            padding:0;
+            height:150px;
+            width:50px;
+            border-width: 0 0 3px 3px;
+            background-image: linear-gradient(rgb(82 81 81) 10% , black 90%);
+            z-index: 2;
+            margin:0 -25px 0 -25px;
+            color:white;
+        }
+        h1{
+         font-size: 40px;
+         font-family: monospace;
+        }
+    </style>
+</head>
+<body>
+   <h1>Piano</h1>
+<div class="board">
+    <div class="ky k1 A">A</div>
+    <div class="ky k2 W">W</div>
+   <div class="ky k1 S" >S</div>
+   <div class="ky k2 E">E</div>
+   <div class="ky k1 D">D</div>
+   <div class="ky k1 F">F</div>
+   <div class="ky k2 T">T</div>
+   <div class="ky k1 G">G</div>
+   <div class="ky k2 Y">Y</div>
+   <div class="ky k1 H">H</div>
+   <div class="ky k2 U">U</div>
+   <div class="ky k1 J">J</div>
+   </div>
+   <script>
+      var keys=document.querySelectorAll('.ky');
+      keys.forEach((key)=>{
+         key.addEventListener('click',function(){ playNote(key.innerHTML); } );})
+      
+         document.addEventListener('keypress',function(e){ var k=e.key;
+                                                              var n=k.toUpperCase();
+                                                            playNote(n);
+         });
+     
+     function playNote(x)
+     { 
+      var aud;
+      var b=true;
+        if(x == 'A')
+           aud=new Audio('sound/Sa.mp3');
+         else if(x=='S')
+           aud=new Audio('sound/Re.mp3');
+        else if(x=='D')
+           aud=new Audio('sound/Ga.mp3');
+        else if(x=='F')
+           aud=new Audio('sound/Ma.mp3');
+        else if(x=='G')
+           aud=new Audio('sound/Pa.mp3');
+        else if(x=='H')
+           aud=new Audio('sound/Da.mp3');
+        else if(x=='J')
+           aud=new Audio('sound/Ni.mp3');
+        else if(x=='W')
+           aud=new Audio('sound/Ch1.mp3');
+        else if(x=='E')
+           aud=new Audio('sound/Ch2.mp3');
+        else if(x=='T')
+           aud=new Audio('sound/Ch3.mp3');
+        else if(x=='Y')
+           aud=new Audio('sound/Ch4.mp3');
+        else if(x=='U')
+           aud=new Audio('sound/Ch5.mp3');
+        else 
+           b=false;
+         if(b)
+         {
+            aud.play();
+            animate(x);
+         }
+       }
+        function animate(note)
+        {
+         var k=document.querySelector('.'+note);
+         if(k.classList.contains('k1'))
+         {
+             k.style.opacity="0.6";
+             setTimeout(function() { k.style.opacity="1";  } , 100);
+         }
+         else 
+         { 
+            k.style.backgroundImage="linear-gradient(black,violet,blue,powderblue)";
+            setTimeout(function() { k.style.backgroundImage="linear-gradient(rgb(82 81 81) 10% , black 90%)";} , 100);
+         }
+        } 
+   </script>
+</body>
+</html>
