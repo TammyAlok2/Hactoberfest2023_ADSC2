@@ -1,0 +1,21 @@
+<!-- HTML -->
+<input type="text" id="display">
+<button onclick="clearDisplay()">C</button>
+<button onclick="appendToDisplay('7')">7</button>
+<!-- ... Add buttons for other digits and operators ... -->
+<button onclick="calculate()">=</button>
+<script>
+  let display = '';
+  function appendToDisplay(value) {
+    display += value;
+    document.getElementById('display').value = display;
+  }
+  function clearDisplay() {
+    display = '';
+    document.getElementById('display').value = '';
+  }
+  function calculate() {
+    display = eval(display);
+    document.getElementById('display').value = display;
+  }
+</script>
