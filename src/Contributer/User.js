@@ -111,6 +111,12 @@ const user = [
     about: 'Full stack developer',
     linkedinProfile: 'https://www.linkedin.com/in/pratyush2704/',
   },
+  {
+    name: 'James Ngandu',
+    github_username: 'jmngandu',
+    about: 'frontend web developer',
+    linkedinProfile: 'https://www.linkedin.com/in/james-ngandu/'
+  },
 
 ];
 
