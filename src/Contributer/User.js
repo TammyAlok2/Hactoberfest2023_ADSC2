@@ -34,6 +34,13 @@ const user = [
     linkedinProfile: "https://www.linkedin.com/in/sagar-singh-97a600221/",
   },
   {
+    name: "Pailla Navya Preetham Reddy",
+    github_username: "daemonvk18",
+    about:
+      "Hello I am navya preetham  , flutter  developer , open source contributer.",
+    linkedinProfile: " https://www.linkedin.com/in/navya-preetham-reddy-431145244/",
+  },
+  {
     name: "Sahil",
     github_username: "Sahil-K123",
     about:
