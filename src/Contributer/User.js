@@ -119,7 +119,7 @@ const user = [
   },
   {
     name: 'Tanishka Shivhare',
-    github_username: 'jTanishka-22',
+    github_username: 'Tanishka-22',
     about: 'frontend web developer',
     linkedinProfile: 'https://www.linkedin.com/in/tanishka-shivhare-55876124b/'
   },
