@@ -81,11 +81,16 @@ button{
     margin: 5px;
     background-color: black;
     border-radius: 30px;
+    
+    
 }
 button:hover{
     box-shadow: 4px 4px 20px black;
+    transform: rotate(8deg);
+    border: 2px solid whitesmoke;
+    
 }
 button a{
     text-decoration: none;
-    color: gold;
+    color:white;
 }

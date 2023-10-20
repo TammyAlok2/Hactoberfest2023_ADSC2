@@ -17,7 +17,7 @@ const Profile = () => {
             <h3 className="id"> {item.name}</h3>
             <p className="description"> {item.about} </p>
             <button>
-              <a href={item.linkedinProfile}>LinkedIn</a>
+              <a href={item.linkedinProfile}>LinkedIn</a> 
             </button>
             <button>
               <a href={`https://github.com/${item.github_username}`}>GitHub</a>
