@@ -117,6 +117,12 @@ const user = [
     about: 'frontend web developer',
     linkedinProfile: 'https://www.linkedin.com/in/james-ngandu/'
   },
+  {
+    name: 'Tanishka Shivhare',
+    github_username: 'jTanishka-22',
+    about: 'frontend web developer',
+    linkedinProfile: 'https://www.linkedin.com/in/tanishka-shivhare-55876124b/'
+  },
 
 ];
 
