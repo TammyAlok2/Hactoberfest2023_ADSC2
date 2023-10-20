@@ -1,0 +1,149 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    background-image: url(banner.jpg);
+    height: 80vh;
+    background-position: center;
+    background-size: cover;
+}
+
+.container {
+    margin-right: 100px;
+    margin-left: 100px;
+}
+
+.nav-links {
+    width: 250px;
+    height: 100vh;
+    z-index: 2;
+    background: rgb(18, 173, 184);
+    right: -250px;
+    top: 0;
+    position: fixed;
+    transition: 0.5s;
+}
+
+.nav-links a {
+    color: white;
+    font-weight: 300;
+    font-size: 20px;
+}
+
+nav ul li {
+    list-style: none;
+    margin: 50px 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu-btn {
+    top: 25px;
+    right: 25px;
+    cursor: pointer;
+    width: 50px;
+    z-index: 2;
+    position: fixed;
+}
+
+.logo {
+    width: 150px;
+    margin: 50px 50px;
+}
+
+.welcome {
+    padding: 50px 100px;
+    background: white;
+    box-shadow: 0 0 20px 7px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box;
+    text-align: center;
+    width: 80%;
+    margin-top: -140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.btn-home {
+    padding: 15px 20px;
+    background: black;
+    color: white;
+    font-size: bold;
+    border: none;
+    outline: none;
+    border-radius: 30px;
+}
+
+.btn-home:focus {
+    box-shadow: none;
+}
+
+.about {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+    margin-right: 100px;
+    justify-content: space-evenly;
+}
+
+.col-about {
+    flex-basis: 50%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    margin-bottom: 50px;
+}
+
+.col-about img {
+    width: 75%;
+}
+
+.about-text {
+    width: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.services {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+.col-md-4 {
+    flex-basis: 30%;
+    display: inline-block;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.features {
+    padding-top: 100px;
+    padding-bottom: 100px;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.9)), url(feature-background.jpg);
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    color: white;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 100px;
+    margin-right: 100px;
+}
