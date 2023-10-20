@@ -2,6 +2,12 @@
 
 const user = [
   {
+    name: 'Vishal Jadhav',
+    github_username: 'vishaljadhav207',
+    about: 'Hey everyone, I am in my final year of Btech.I love to work on Fullstack developer role',
+    linkedinProfile:'https://www.linkedin.com/in/vishal-jadhav-609a3a222/',
+  },
+  {
     name: 'Kudaya Paul Yao',
     github_username: '0xNunana',
     about: 'Hey everyone, I am a Senior Frontend Developer. I am very proficent in JS,TS and NextJs Framework',
