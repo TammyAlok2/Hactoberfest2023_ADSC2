@@ -129,6 +129,12 @@ const user = [
     about: 'frontend web developer',
     linkedinProfile: 'https://www.linkedin.com/in/tanishka-shivhare-55876124b/'
   },
+  {
+    name: 'Shashwat Singh',
+    github_username: 'hzshashwat',
+    about: 'CYbersecurity Analyst',
+    linkedinProfile: 'https://www.linkedin.com/in/hzshashwat/'
+  },
 
 ];
 
