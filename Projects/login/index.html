@@ -1,0 +1,36 @@
+<!DOCTTYPE <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>FORM</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link  rel="stylesheet" href="style.css">
+    </head>
+    <body>
+    <div class="outer">
+<form action="" onsubmit="return validateform()">
+    <h1>Form Authentication</h1><br>
+    <label for="name">Name:</label>
+    <input type="text" placeholder="enter name" id="name"><br>
+    <p class="pname error"></p>
+    <label for="pass">Password:</label>
+    <input type="password" placeholder="enter password" id="pass"><br>
+    <p class="ppass error"></p>
+    <label for="email">Email:</label>
+    <input type="email" placeholder="Enter Email" id="email"><br>
+    <p class="pemail error"></p>
+    <label for="contact">Contact No. :</label>
+    <input type="number" placeholder="enter pbone number" number="number" id="contact"><br>
+    <p class="pnum error"></p>
+    <label for="check">Rating:</label><br>
+    <input type="radio" name="rating" id="check">1<br>
+    <input type="radio" name="rating" id="check">2<br>
+    <input type="radio" name="rating" id="check">3<br>
+    <input type="radio" name="rating" id="check">4<br>
+    <input type="radio" name="rating" id="check">5<br>
+    <button>Submit</button>
+    </form>
+    </div>
+    <script src=form.js></script>
+    </body>
+</html>
