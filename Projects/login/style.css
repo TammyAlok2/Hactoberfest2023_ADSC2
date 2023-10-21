@@ -1,0 +1,28 @@
+.outer{
+    margin:10px 300px;
+    width:400px;
+    height:auto;
+    border:2px solid black;
+    background-color:blue;
+    padding:15px;
+    color:white;
+}
+button{
+    height:50px;
+    width:100px;
+    border-radius:4px;
+    background-color:red;
+    color:black;
+
+}
+button:hover{
+    box-shadow:2px 2px 2px 2px black;
+}
+label{
+    font-size:20px;
+}
+.error{
+    color:red;
+    font-size: 18px;
+    margin:5px;
+}
