@@ -135,6 +135,12 @@ const user = [
     about: 'CYbersecurity Analyst',
     linkedinProfile: 'https://www.linkedin.com/in/hzshashwat/'
   },
+  {
+    name: 'Rudreshwar Baranwal',
+    github_username: 'devrudra9',
+    about: 'MERN Stack Web Developer',
+    linkedinProfile: 'https://www.linkedin.com/in/rudreshwarbaranwal/'
+  },
 
 ];
 
