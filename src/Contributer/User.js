@@ -135,6 +135,13 @@ const user = [
     about: 'CYbersecurity Analyst',
     linkedinProfile: 'https://www.linkedin.com/in/hzshashwat/'
   },
+  {
+    name: 'Surarapu Vagdevi',
+    github_username: 'Vagdevi007',
+    about: 'Business Process Analyst',
+    linkedinProfile: 'https://www.linkedin.com/in/vagdevi-s-211311229'
+  },
+
 
 ];
 
