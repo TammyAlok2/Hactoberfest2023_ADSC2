@@ -135,6 +135,12 @@ const user = [
     about: 'CYbersecurity Analyst',
     linkedinProfile: 'https://www.linkedin.com/in/hzshashwat/'
   },
+  {
+    name: 'Andri Deng',
+    github_username: 'andrideng',
+    about: 'Software Engineer',
+    linkedinProfile: 'https://www.linkedin.com/in/andrideng/'
+  },
 
 ];
 
