@@ -1,0 +1,39 @@
+<html>
+<head>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.0.0-alpha1/css/bootstrap.min.css" integrity="sha384-r4NyP46KrjDleawBgD5tp8Y7UzmLA05oM1iAEQ17CSuDqnUK2+k9luXQOfXJCJ4I" crossorigin="anonymous"/>
+</head>
+<body>
+    
+<div class="container">
+    <h1 class="text-center mb-3">Youtube to mp3</h1>
+    <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label">Link Youtube</label>
+        <textarea class="form-control" id="inputlink" rows="3"></textarea>
+    </div>
+    <select class="form-select mb-3" id="pickServer" aria-label="Default select example">
+        <option selected>choose server</option>
+        <option value="1">1</option>
+        <option value="2">2</option>
+      </select>
+    <div class="text-center"><button onclick="onSubmit()" type="button" class="btn btn-primary btn-lg">Download</button></div>
+    <div class="mt-5"><iframe width="500px" id="resultnya" ></iframe></div>
+</div>
+</body>
+</html>
+<script>
+    function onSubmit(){
+        let dataYutub = document.getElementById("inputlink").value;
+        let clearLink = dataYutub.split("&")[0]; 
+     
+        let yutubId = clearLink.substr(clearLink.search("=")+1, clearLink.length);
+        let pickServer = document.getElementById("pickServer").value;
+        console.log(pickServer);
+        if(pickServer == 1){
+            document.getElementById("resultnya").src = 'https://yt-download.org/api/button/mp3?url=' + dataYutub;
+        }else {
+            document.getElementById("resultnya").src = 'https://api.youtube-mp3.org.in/widget/button/audio/' + yutubId;
+        }
+
+        
+    }
+</script>

@@ -85,7 +85,12 @@ const user = [
     about: "Bacot gua cuman butuh buat hacktoberfest",
     linkedinProfile: "",
   },
-
+    {
+    name: "Achmad Rivaldi",
+    github_username: "mrtampan",
+    about: "Hello I am rivaldi , vue developer , open source contributer.",
+    linkedinProfile: "",
+  },
   {
     name: "Safiya Siddiqui",
     github_username: "QaziSafiya",
