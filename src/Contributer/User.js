@@ -153,6 +153,13 @@ const user = [
     about: 'Software Engineer',
     linkedinProfile: 'https://www.linkedin.com/in/andrideng/'
   },
+  {
+    name: 'Gaurav Meena',
+    github_username: 'Gaurav-meena95',
+    about: 'full stack developer',
+    linkedinProfile: 'https://www.linkedin.com/in/gaurav-meena-938947381/'
+  },
+
 
 ];
 
