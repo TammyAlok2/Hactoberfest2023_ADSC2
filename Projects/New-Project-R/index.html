@@ -1,0 +1,340 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>Hactoberfest 2023 </title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <style>
+      *{
+    padding: 0;margin: 0;
+    box-sizing: border-box;
+    border: 0;
+    outline: 0;
+    text-decoration: none;
+    list-style: none;
+}
+body{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.7;
+    background:black;
+    color:white;
+}
+.container{
+    width:76%;
+    margin:0 auto;
+}
+nav{
+    background: transparent;
+    width:100vw;
+    height: 5rem;
+    position: fixed;
+    top:0;
+    z-index: 11;
+    height: 5rem;
+    background-color: #424890;
+}
+.nav_container{
+    height:100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+   
+}
+.nav_menu{
+    display: flex;
+    justify-content: center;
+    gap:4rem;
+   
+}
+.nav_menu a{
+    font-size: 0.9rem;
+    transition:all 400ms ease;
+    color:white;
+   
+}
+.nav_menu a:hover{
+    color:wheat;
+
+}
+.nav_container h4{
+  font-size: 28px;
+  font-weight: 500;
+  color:whitesmoke ;
+}
+header{
+    position: relative;
+    top:3rem;
+    width:100vw;
+    height: 75vh;
+    overflow: hidden;
+    margin-bottom: 2rem;
+    /* background-color:#1f2641;
+     */
+    background-color: black;
+    }
+.header_container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items:center;
+    gap:4rem;
+    height: 100%;
+}
+.header_left p{
+    font-size: 5px;
+    padding-top: 4rem;
+}
+a{
+    color:white;
+}
+.header_right{
+    width:100%;
+    height: 400px;
+    display: inline;
+}
+.header_right img{
+  object-fit: cover;
+  width:100%;
+  height: 400px;
+  padding-top: 4rem;
+  border: none;
+  border-radius: 2px;
+}
+.header-left h1{
+  padding-top: 0px;
+  padding-bottom: 1rem;
+  margin-top: 0.5rem;
+  color:#6c66d4;
+}
+.btn{
+    display: inline-block;
+    background: white;
+    color:black;
+    padding:1rem 2rem;
+    border:1px solid transparent;
+    font-weight: 500;
+    transition: all 400ms ease;
+}
+.ones{
+  margin-top: 2rem;
+}
+.btn-primary{
+    background:#424890;
+    color:white;
+}
+.btn:hover{
+    background: #6c66d4;
+    color:var(--color-white);
+    border-color: var(--color-white);
+}
+.photos{
+  margin-top: 7rem;
+  margin-bottom: 5rem;
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+.photos h1{
+  text-align: center;
+  padding-top: 2rem;
+  padding-bottom: 4rem;
+  font-size: 2.5rem;
+  color:#6c66d4;
+}
+.all_photos{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+    align-items:center;
+    gap:3rem;
+
+}
+footer{
+    background: rgb(21, 20, 20);
+    padding-top: 5rem;
+    font-size: 0.9rem;
+}
+.footer_container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap:5rem;
+}
+.footer_container div h4{
+    margin-bottom: 1.2rem;
+}
+.footer_1{
+    margin:0 0 2rem;
+}
+footer ul li{
+    margin-bottom: 0.7rem;
+}
+footer ul li a:hover{
+    text-decoration: underline;
+}
+.footer_socials{
+    display: flex;
+    gap:1rem;
+    font-size:1.2rem ;
+    margin-top: 2rem;
+}
+
+
+
+    </style>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+    <nav>
+      <div class="container nav_container">
+          <a href="index.html"><h4>Get Started</h4></a>
+          <ul class="nav_menu">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Courses</a></li>
+              <li><a href="#">Contact</a></li>
+          </ul>
+      </div>
+  </nav>
+
+  <header>
+    <div class="container header_container">
+        <div class="header-left">
+            <h1>Learn by doing</h1>
+      <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eius accusantium illum repellat aperiam reprehenderit illo repellendus suscipit enim pariatur incidunt!</p>
+      <a href="courses.html" class="btn btn-primary ones">Get Started</a>
+    </div>
+        <div class="header_right">
+
+                <img src="C:\Users\REKHA GIRI\Desktop\code3\code7\Hactoberfest2023_ADSC2\Projects\New-Project-R\background.jpg"/>
+        </div>
+      
+    </div>
+</header>
+
+<div class="photos">
+  <h1>Have a glance of events</h1>
+  <div class="all_photos">
+  <div class="p_img">
+    <img src="C:\Users\REKHA GIRI\Desktop\code3\code7\Hactoberfest2023_ADSC2\Projects\New-Project-R\hacathon.png">
+  </div>
+
+  <div class="p_img">
+    <img src="C:\Users\REKHA GIRI\Desktop\code3\code7\Hactoberfest2023_ADSC2\Projects\New-Project-R\hacathon.png">
+  </div>
+
+  <div class="p_img">
+    <img src="C:\Users\REKHA GIRI\Desktop\code3\code7\Hactoberfest2023_ADSC2\Projects\New-Project-R\hacathon.png">
+  </div>
+
+  <div class="p_img">
+    <img src="C:\Users\REKHA GIRI\Desktop\code3\code7\Hactoberfest2023_ADSC2\Projects\New-Project-R\hacathon.png">
+  </div>
+
+  <div class="p_img">
+    <img src="C:\Users\REKHA GIRI\Desktop\code3\code7\Hactoberfest2023_ADSC2\Projects\New-Project-R\hacathon.png">
+  </div>
+
+  <div class="p_img">
+    <img src="C:\Users\REKHA GIRI\Desktop\code3\code7\Hactoberfest2023_ADSC2\Projects\New-Project-R\hacathon.png">
+  </div>
+
+  <div class="p_img">
+    <img src="C:\Users\REKHA GIRI\Desktop\code3\code7\Hactoberfest2023_ADSC2\Projects\New-Project-R\hacathon.png">
+  </div>
+
+  <div class="p_img">
+    <img src="C:\Users\REKHA GIRI\Desktop\code3\code7\Hactoberfest2023_ADSC2\Projects\New-Project-R\hacathon.png">
+  </div>
+
+  <div class="p_img">
+    <img src="C:\Users\REKHA GIRI\Desktop\code3\code7\Hactoberfest2023_ADSC2\Projects\New-Project-R\hacathon.png">
+  </div>
+  </div>
+</div>
+
+<footer class="footer">
+  <div class="container footer_container">
+
+      <div class="footer_1">
+          <a href="index.html" class="footer_logo"><h4>GetStarted</h4></a>
+          <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus, nobis.</p>
+      </div>
+
+      <div class="footer_2">
+          <h4>Permalinks</h4>
+          <ul class="permalinks">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="courses.html">Courses</a></li>
+              <li><a href="contact.html">Contact</a></li>
+          </ul>
+      </div>
+
+      <div class="footer_3">
+          <h4>Privacy</h4>
+          <ul class="privacy">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms and Conditions</a></li>
+              <li><a href="#">Refund Policy</a></li>
+          </ul>
+      </div>
+
+      <div class="footer_4">
+          <h4>Contact Us</h4>
+          <div>
+              <p>+012345678910</p>
+              <p>abcd@gmail.com</p>
+          </div>
+
+          <ul class="footer_socials">
+              <li>
+                  <a href="#"><i class="fa-brands fa-facebook"></i> </a>
+              </li>
+              <li>
+                  <a href="#"> <a href="#"><i class="fa-brands fa-instagram"></i> </a>
+              </li>
+              <li>
+                  <a href="#"> <a href="#"><i class="fa-brands fa-twitter"></i> </a>
+              </li>
+              <li>
+                  <a href="#"> <a href="#"><i class="fa-brands fa-linkedin"></i> </a>
+              </li>
+          </ul>
+      </div>
+      
+  </div>
+
+  </body>
+</html>
